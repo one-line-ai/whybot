@@ -1,31 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>왜죠봇</title> 
+	<title>왜죠봇</title>
 	<style>
 		img {
 			max-width: 100%;
 			height: auto;
 		}
+
+		.image-container {
+			position: relative;
+			width: 100%;
+		}
+
+		.overlay-button {
+			position: absolute;
+			display: block;
+			background-color: rgba(255, 255, 255, 0);
+			text-decoration: none;
+		}
+
+		.overlay-button:hover {
+			background-color: rgba(255, 255, 255, 0.5); 
+		}
 	</style>
-		
+	<script>
+		window.addEventListener("load", function() {
+			const img = document.querySelector(".image-container img");
+			const buttons = document.querySelectorAll(".overlay-button");
+
+			function setButtonPositions() {
+				const imgWidth = img.offsetWidth;
+				const imgHeight = img.offsetHeight;
+				const originalWidth = 1920; // 실제 이미지 너비
+				const originalHeight = 12640; // 실제 이미지 높이
+
+				buttons.forEach(button => {
+					const coords = button.getAttribute("data-coords").split(",").map(Number);
+					button.style.left = (coords[0] * imgWidth / originalWidth) + "px";
+					button.style.top = (coords[1] * imgHeight / originalHeight) + "px";
+					button.style.width = ((coords[2] - coords[0]) * imgWidth / originalWidth) + "px";
+					button.style.height = ((coords[3] - coords[1]) * imgHeight / originalHeight) + "px";
+				});
+			}
+
+			setButtonPositions();
+			window.addEventListener("resize", setButtonPositions);
+		});
+	</script>
 </head>
 <body>
-	<img src="image/whybot.png" usemap="#image-map">
-	<map name="image-map">
-		<area target="_blank" alt="왜죠봇 신청서 바로가기" title="왜죠봇 신청서 바로가기" href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" coords="458,1251,888,1418" shape="rect">
-    		<area target="_blank" alt="왜죠봇 채널 바로가기" title="왜죠봇 채널 바로가기" href="http://pf.kakao.com/_MLDcxj" coords="996,1256,1429,1415" shape="rect">
-   		<area target="_blank" alt="왜죠봇 신청서 바로가기" title="왜죠봇 신청서 바로가기" href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" coords="647,2397,924,2503,1281,2656" shape="rect">
-   		<area target="_blank" alt="왜죠봇 채널 바로가기" title="왜죠봇 채널 바로가기" href="http://pf.kakao.com/_MLDcxj" coords="1270,2499,994,2396" shape="rect">
-   		<area target="_blank" alt="아시아경제 기사 보러가기" title="아시아경제 기사 보러가기" href="https://view.asiae.co.kr/article/2023041810371952378" coords="569,2724,1368,2863" shape="rect">
-   		<area target="_blank" alt="한국경제 기사 보러 가기" title="한국경제 기사 보러 가기" href="https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202304180253&amp;t=NN" coords="569,2866,1371,3017" shape="rect">
-   		<area target="_blank" alt="와디즈 구경하러 가기" title="와디즈 구경하러 가기" href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" coords="708,7488,1212,7683" shape="rect">
-   		<area target="_blank" alt="와디즈 구경하러 가기" title="와디즈 구경하러 가기" href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" coords="710,10633,1214,10825" shape="rect">
-        </map>
-	
-  
+	<div class="image-container">
+		<img src="whybot.png" alt="왜죠봇">
+		<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" style="top: 1251px; left: 458px; width: 430px; height: 167px;"></a>
+		<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" style="top: 1256px; left: 996px; width: 433px; height: 159px;"></a>
+		<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" style="top: 2447px; left: 647px; width: 634px; height: 209px;"></a>
+		<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" style="top: 2446px; left: 994px; width: 276px; height: 103px;"></a>
+		<a href="https://view.asiae.co.kr/article/2023041810371952378" class="overlay-button" style="top: 2794px; left: 569px; width: 799px; height: 139px;"></a>
+		<a href="https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202304180253&amp;t=NN" class="overlay-button" style="top: 2936px; left: 569px; width: 802px; height: 151px;"></a>
+		<a href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" class="overlay-button" style="top: 7618px; left: 708px; width: 504px; height: 195px;"></a>
+		<a href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" class="overlay-button" style="top: 10825px; left: 710px; width: 504px; height: 192px;"></a>
+	</div>
 </body>
 </html>
