@@ -36,8 +36,8 @@
 			function setButtonPositions() {
 				const imgWidth = img.offsetWidth;
 				const imgHeight = img.offsetHeight;
-				const originalWidth = 1920; // 실제 이미지 너비
-				const originalHeight = 12640; // 실제 이미지 높이
+				const originalWidth = 1920;
+				const originalHeight = 12640;
 
 				buttons.forEach(button => {
 					const coords = button.getAttribute("data-coords").split(",").map(Number);
@@ -56,14 +56,14 @@
 <body>
 	<div class="image-container">
 		<img src="image/whybot.png" alt="왜죠봇">
-		<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" style="top: 1251px; left: 458px; width: 430px; height: 167px;"></a>
-		<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" style="top: 1256px; left: 996px; width: 433px; height: 159px;"></a>
-		<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" style="top: 2447px; left: 647px; width: 276px; height: 103px;"></a>
-		<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" style="top: 2446px; left: 994px; width: 276px; height: 103px;"></a>
-		<a href="https://view.asiae.co.kr/article/2023041810371952378" class="overlay-button" style="top: 2794px; left: 569px; width: 799px; height: 139px;"></a>
-		<a href="https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202304180253&amp;t=NN" class="overlay-button" style="top: 2936px; left: 569px; width: 802px; height: 151px;"></a>
-		<a href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" class="overlay-button" style="top: 7618px; left: 708px; width: 504px; height: 195px;"></a>
-		<a href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" class="overlay-button" style="top: 10825px; left: 710px; width: 504px; height: 192px;"></a>
+		<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" data-coords="459,1255,888,1418"></a>
+		<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" data-coords="995,1259,1432,1413"></a>
+		<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" data-coords="649,2448,924,2553"></a>
+		<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" data-coords="991,2446,1270,2553"></a>
+		<a href="https://view.asiae.co.kr/article/2023041810371952378" class="overlay-button" data-coords="567,2795,1366,2931"></a>
+		<a href="https://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202304180253&amp;t=NN" class="overlay-button" data-coords="565,2935,1366,3086"></a>
+		<a href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" data-coords="710,7618,1214,7813"></a>
+		<a href="https://www.wadiz.kr/web/campaign/detail/218508?_refer_section_st=PersonalCurator_0" class="overlay-button" data-coords="705,10827,1215,11015"></a>
 	</div>
 </body>
 </html>
