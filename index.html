@@ -79,9 +79,7 @@
 		</div>
 	</div>
 	<script>
-		window.addEventListener('load', function() {
-			window.scrollTo(0, 0);
-		});
+
 		window.addEventListener("load", function() {
 			const img = document.querySelector(".image-container img");
 			const buttons = document.querySelectorAll(".overlay-button, .transparent-button-link");
@@ -103,6 +101,9 @@
 
 			setButtonPositions();
 			window.addEventListener("resize", setButtonPositions);
+		});
+		window.addEventListener('load', function() {
+			window.scrollTo(0, 0);
 		});
 	</script>
 </body>
