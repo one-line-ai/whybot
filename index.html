@@ -60,7 +60,7 @@
 	<script>
 		window.addEventListener("load", function() {
 			const img = document.querySelector(".image-container img");
-			const buttons = document.querySelectorAll(".overlay-button");
+			const buttons = document.querySelectorAll(".overlay-button, .transparent-button-link");
 
 			function setButtonPositions() {
 				const imgWidth = img.offsetWidth;
@@ -87,7 +87,7 @@
 		<div class="centered-content">
 			<div class="image-wrapper">
 				<img src="image/whybot2.png" alt="왜죠봇">
-				<a href="https://www.onelineai.com" class="transparent-button-link" style="left: 362px; top: 54px; width: 295px; height: 92px;"></a>
+				<a href="https://www.onelineai.com" class="transparent-button-link" data-coords="360,59,657,146" target="_blank"></a>
 				<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" data-coords="463,1257,884,1411" target="_blank"></a>
 				<a href="http://pf.kakao.com/_MLDcxj" class="overlay-button" data-coords="1002,1257,1427,1411" target="_blank"></a>
 				<a href="https://docs.google.com/forms/d/11-lDoE-N8B0x-zW4yCx4SHedZOll_QiJi43jBDZ4nr0/edit" class="overlay-button" data-coords="650,2449,922,2551" target="_blank"></a>
